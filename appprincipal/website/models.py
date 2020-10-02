@@ -1,0 +1,40 @@
+from django.db import models
+import datetime
+# Create your models here.
+
+class Historico(models.Model):
+
+    sigla = models.CharField(max_length=4, blank=False)
+    numVoo = models.CharField(max_length=200, null=True)
+
+    choices = (
+        ('Realizada', 'Viagem Realizada'),
+        ('Cancelada', 'Viagem Cancelada'),
+    )
+
+    status = models.CharField(max_length=10, choices=choices, default='Sem conhecimento')
+    tipoLinha = models.CharField(max_length=50, default="Sem Dados")
+    data_prevista = models.DateTimeField(auto_now_add= False, null=True)
+    origem = models.CharField(max_length=50, null=False,blank=False)
+    destino = models.CharField(max_length=50, null=False,blank=False)
+
+    class Meta:
+        abstract = True
+
+    def __str__(self):
+        return 'Sigla: {0} numVoo: {1}'.format(self.sigla, self.numVoo)
+
+class Hist_voo2015(Historico):
+    pass
+
+class Hist_voo2016(Historico):
+    pass
+
+class Hist_voo2017(Historico):
+    pass
+
+class Hist_voo2018(Historico):
+    pass
+
+class Hist_voo2019(Historico):
+    pass

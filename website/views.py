@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
 
-from .models import Hist_voo2015, Hist_voo2016, Hist_voo2017
+from .models import *
 
 from .forms import *
 
@@ -18,12 +18,13 @@ def Hist_2015_1(request):
     }
     return render(request, 'hist2015.html', context)
 
-def Hist_2015_2(Hist_2015_1):
-    pass
+def Hist_2015_2(request):
+    item = Hist_voo2015_2.objects.all()
     context = {
+        'item': item,
         'header': 'Historico 2015 Fevereiro',
     }
-    return render(Hist_2015_1, 'hist2015.html', context)
+    return render(request, 'hist2015.html', context)
 
 
 def Hist_2015_3(Hist_2015_1):
@@ -32,6 +33,64 @@ def Hist_2015_3(Hist_2015_1):
         'header': 'Historico 2015 Março',
     }
     return render(Hist_2015_1, 'hist2015.html', context)
+
+def Hist_2015_4(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Abril',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+
+def Hist_2015_5(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Maio',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+
+def Hist_2015_6(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 junho',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+def Hist_2015_7(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Julho',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+def Hist_2015_8(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Agosto',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+def Hist_2015_9(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Setembro',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+def Hist_2015_10(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Outubro',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+def Hist_2015_11(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Novembro',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+def Hist_2015_12(Hist_2015_1):
+    pass
+    context = {
+        'header': 'Historico 2015 Dezembro',
+    }
+    return render(Hist_2015_1, 'hist2015.html', context) 
+
 
 def Hist_2016_1(request):
     item = Hist_voo2016.objects.all()

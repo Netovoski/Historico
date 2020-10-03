@@ -34,7 +34,6 @@
             <th>Num. Voo</th>
             <th>Status</th>
             <th>Tipo de Linha</th>
-            <th>Data Prevista</th>
             <th>Origem</th>
             <th>Destino</th>
             <th></th>
@@ -43,7 +42,7 @@
 
     <tbody>
 
-        {% for item in items %}
+        {% for item in item %}
 
         <tr>
             <td>{{ item.pk }}
@@ -51,7 +50,6 @@
             <td>{{ item.numVoo }}</td>
             <td>{{ item.status }}</td>
             <td>{{ item.tipoLinha }}</td>
-            <td>{{ item.data_prevista }}</td>
             <td>{{ item.origem }}</td>
             <td>{{ item.destino }}</td>
 

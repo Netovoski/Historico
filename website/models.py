@@ -6,6 +6,7 @@ class Historico(models.Model):
 
     sigla = models.CharField(max_length=4, blank=False)
     numVoo = models.CharField(max_length=200, null=True)
+    type = models.CharField(max_length=200, blank=False)
 
     choices = (
         ('Realizada', 'Viagem Realizada'),
@@ -18,8 +19,8 @@ class Historico(models.Model):
     origem = models.CharField(max_length=50, null=False,blank=False)
     destino = models.CharField(max_length=50, null=False,blank=False)
 
-    class Meta:
-        abstract = True
+    # class Meta:
+    #     abstract = True
 
     def __str__(self):
         return 'Sigla: {0} numVoo: {1}'.format(self.sigla, self.numVoo)
